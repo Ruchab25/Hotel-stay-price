@@ -1,0 +1,34 @@
+#include<stdio.h>
+int main()
+{
+    int nop, price, days, yn;//nop=number of persons
+    float discount, fin;
+    printf("total number of persons:\n");
+    scanf("%d", &nop);
+    printf("total number of days\n:");
+    scanf("%d", &days);
+
+    if(nop<2)
+    {
+        printf("no rooms are available\n:");
+    }
+    else
+    {
+        price=(500+nop*1000)*days;
+        printf("Are you staying for a business trip?/n:");
+        printf("Press 1 for yes and 0 for no\n:");
+        scanf("%d", &yn);
+        if(yn==1)
+        {
+            fin=price-(0.2*price);
+            printf("Your total price is: %f", fin);
+        }
+        else
+        {
+         fin=price;
+         printf("Your total price is: %d", price);
+        }
+    }
+    return 0;
+}
+
